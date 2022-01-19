@@ -1,0 +1,6 @@
+name: wpcu
+recipe: pantheon
+config:
+  framework: wordpress
+  site: wpcu
+  id: d8572f56-c841-4482-bcc0-5a8e8135b3d6
