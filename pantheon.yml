@@ -11,7 +11,17 @@ workflows:
       - type: webphp
         description: Post deployment notification to Slack
         script: private/scripts/slack_notification.php
-
+ deploy:
+    after:
+      - type: webphp
+        description: Log to New Relic
+        script: private/scripts/new_relic_deploy.php
+  # Also log sync_code so you can track new code going into dev/multidev.
+  sync_code:
+    after:
+      - type: webphp
+        description: Log to New Relic
+        script: private/scripts/new_relic_deploy.php
         
 # workflows:
 #   sync_code:
