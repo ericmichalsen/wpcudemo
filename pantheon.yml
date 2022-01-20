@@ -6,3 +6,10 @@ workflows:
       - type: webphp
         description: Post deployment notification to Slack
         script: private/scripts/slack_notification.php
+
+# workflows:
+#   sync_code:
+#     after:
+#       - type: webphp
+#         description: Push changes back to Git repository if needed
+#         script: private/scripts/quicksilver/quicksilver-pushback/push-back.php
