@@ -6,7 +6,13 @@ workflows:
       - type: webphp
         description: Post deployment notification to Slack
         script: private/scripts/slack_notification.php
+  deploy:
+    after:
+      - type: webphp
+        description: Post deployment notification to Slack
+        script: private/scripts/slack_notification.php
 
+        
 # workflows:
 #   sync_code:
 #     after:
