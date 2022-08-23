@@ -1,4 +1,4 @@
-name: wpcu
+name: wpcuupstream
 recipe: pantheon
 config:
   framework: wordpress
